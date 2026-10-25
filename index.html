@@ -1,148 +1,79 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prajanika - Health & Wellness</title>
+    <title>Home - Prajanika</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome Icons for design -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Header / Navbar -->
-    <header>
-        <div class="container navbar">
-            <div class="logo">
-                <!-- Logo image ya text -->
-                <a href="#"><img src="logo.png" alt="Prajanika Logo" id="site-logo"></a>
+    <!-- Top Navigation Bar -->
+    <header class="navbar-header">
+        <div class="nav-container">
+            <div class="logo-area">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Prajanika Logo" class="brand-logo" onerror="this.src='https://via.placeholder.com/180x50?text=Prajanika';">
+                </a>
             </div>
             <nav>
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="team.html" class="nav-link"><i class="fas fa-users"></i> Team</a></li>
+                    <li><a href="adolescence.html" class="nav-link"><i class="fas fa-child"></i> Adolescence</a></li>
+                    <li><a href="postpartum.html" class="nav-link"><i class="fas fa-baby"></i> Postpartum</a></li>
+                    <li><a href="menopause.html" class="nav-link"><i class="fas fa-female"></i> Menopause</a></li>
+                    <li><a href="authors-note.html" class="nav-link"><i class="fas fa-feather-alt"></i> Authors' Note</a></li>
+                    <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
                 </ul>
             </nav>
-            <div class="menu-toggle" id="mobile-menu">
+            <div class="mobile-toggle" id="mobileToggle">
                 <i class="fas fa-bars"></i>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container hero-content">
-            <h1>Care & Wellness For Every Stage Of Life</h1>
-            <p>Aapki sehat aur care ke liye hum late hain best health solutions aur expert guidance.</p>
-            <div class="hero-btns">
-                <a href="#contact" class="btn btn-primary">Book Appointment</a>
-                <a href="#services" class="btn btn-secondary">Learn More</a>
-            </div>
+    <!-- MAIN HOME CONTENT -->
+    <main class="page-container hero-layout">
+        <div class="hero-image-side">
+            <img src="images/H0.jpg" alt="Prajanika Overview Poster" class="featured-poster">
         </div>
-    </section>
+        <div class="hero-text-side">
+            <span class="badge">Science Communication Initiative</span>
+            <h1>About Prajanika</h1>
+            <div class="gradient-line"></div>
+            <p><strong>Prajanika</strong> is a science communication and public health awareness initiative dedicated to improving understanding of women's health across critical stages of life. Through evidence-based infographics and educational resources, the project seeks to bridge the gap between scientific knowledge and community awareness by making complex health information accessible, engaging, and easy to understand.</p>
+            <p>Women experience unique physical, emotional, and social transitions throughout their lives. Yet many important health concerns remain poorly understood, under-discussed, or surrounded by stigma. Adolescence, motherhood, and menopause are periods marked by significant biological and psychological changes, often accompanied by questions, challenges, and misinformation.</p>
+            
+            <div class="thematic-boxes">
+                <div class="t-box">
+                    <i class="fas fa-child"></i>
+                    <h4>Adolescent Health</h4>
+                    <p>Addressing puberty, menstrual health, nutrition, and body image.</p>
+                </div>
+                <div class="t-box">
+                    <i class="fas fa-heart"></i>
+                    <h4>Postpartum Mental Health</h4>
+                    <p>Awareness on maternal mental health & postpartum depression.</p>
+                </div>
+                <div class="t-box">
+                    <i class="fas fa-leaf"></i>
+                    <h4>Menopause & Aging</h4>
+                    <p>Exploring hormonal transitions and healthy aging strategies.</p>
+                </div>
+            </div>
 
-    <!-- About Section -->
-    <section id="about" class="about section-padding">
-        <div class="container">
-            <div class="section-title">
-                <h2>About Prajanika</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Humara Maqsad Aur Care</h3>
-                    <p>Prajanika me hum dedicated hain har umar ke logo ki health aur wellness needs ko poora karne ke liye. Humara focus quality care, personal guidance, aur modern healthcare awareness par hai.</p>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Specialized Women's Care & Menopause Guidance</li>
-                        <li><i class="fas fa-check-circle"></i> Holistic Health & Fitness Advice</li>
-                        <li><i class="fas fa-check-circle"></i> Experienced Professionals & Support</li>
-                    </ul>
-                </div>
+            <div class="grant-footer">
+                <p>Supported by <strong>IndiaBioscience</strong> through its <em>IndiaBioscience Outreach Grant</em> initiative awarded to Team Prajanika at IIT Bhilai.</p>
             </div>
         </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services section-padding">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Services & Focus Areas</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="icon"><i class="fas fa-female"></i></div>
-                    <h3>Women's Health</h3>
-                    <p>Menopause, hormonal balance, aur overall wellness ke liye comprehensive solutions.</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon"><i class="fas fa-user-md"></i></div>
-                    <h3>Expert Consultation</h3>
-                    <p>Experienced advisors se personalized health consultation aur support lein.</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon"><i class="fas fa-heartbeat"></i></div>
-                    <h3>Wellness Programs</h3>
-                    <p>Customized lifestyle, nutrition, aur preventive care plans aapki achhi sehat ke liye.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section-padding">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contact Us</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Location</h4>
-                            <p>Bhilai, Chhattisgarh, India</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p>info@prajanika.com</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>+91 98765 43210</p>
-                        </div>
-                    </div>
-                </div>
-                <form class="contact-form" id="contactForm">
-                    <input type="text" placeholder="Aapka Naam" required>
-                    <input type="email" placeholder="Aapka Email" required>
-                    <input type="text" placeholder="Subject" required>
-                    <textarea rows="5" placeholder="Aapka Message..." required></textarea>
-                    <button type="submit" class="btn btn-primary">Message Bhejein</button>
-                </form>
-            </div>
-        </div>
-    </section>
+    </main>
 
     <!-- Footer -->
-    <footer>
-        <div class="container footer-content">
-            <p>&copy; 2026 Prajanika. All Rights Reserved.</p>
-            <div class="socials">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 Prajanika. Supported by IndiaBioscience & IIT Bhilai.</p>
         </div>
     </footer>
 
