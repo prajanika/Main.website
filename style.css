@@ -44,9 +44,25 @@ body {
     padding: 15px 25px;
 }
 
+.logo-area a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
 .brand-logo {
     height: 48px;
     width: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.brand-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: 0.5px;
 }
 
 .nav-menu {
