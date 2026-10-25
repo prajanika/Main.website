@@ -13,7 +13,7 @@ document.querySelectorAll('.carousel-container').forEach(container => {
     const slides = container.querySelectorAll('.carousel-slide-area img');
     const prevBtn = container.querySelector('.prev-btn');
     const nextBtn = container.querySelector('.next-btn');
-    const counterDisplay = document.querySelector('.current-idx');
+    const counterDisplay = container.parentElement.querySelector('.current-idx');
     
     let currentIndex = 0;
     let autoSlideInterval = null;
