@@ -1,22 +1,57 @@
-// Responsive Mobile Navigation Toggle
-const mobileMenu = document.getElementById('mobile-menu');
-const navLinks = document.getElementById('navLinks');
+// Mobile Menu Toggle
+const mobileToggle = document.getElementById('mobileToggle');
+const navMenu = document.getElementById('navMenu');
 
-mobileMenu.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
-
-// Smooth Scroll Links Close Mobile Menu
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
+if (mobileToggle) {
+    mobileToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
     });
-});
+}
 
-// Simple Contact Form Handling
-const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('Dhanyawad! Aapka message successfully bhej diya gaya hai.');
-    contactForm.reset();
+// Interactive Carousel logic for Infographics Pages
+document.querySelectorAll('.carousel-container').forEach(container => {
+    const slides = container.querySelectorAll('.carousel-slide-area img');
+    const prevBtn = container.querySelector('.prev-btn');
+    const nextBtn = container.querySelector('.next-btn');
+    const counterDisplay = document.querySelector('.current-idx');
+    
+    let currentIndex = 0;
+    let autoSlideInterval = null;
+
+    function updateCarousel(index) {
+        slides.forEach(slide => slide.classList.remove('active-slide'));
+        slides[index].classList.add('active-slide');
+        if (counterDisplay) {
+            counterDisplay.textContent = index + 1;
+        }
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel(currentIndex);
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateCarousel(currentIndex);
+    }
+
+    if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+    if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+
+    // Auto Play Slide
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(nextSlide, 3500);
+    }
+
+    function stopAutoSlide() {
+        clearInterval(autoSlideInterval);
+    }
+
+    // Hover Pause functionality
+    container.addEventListener('mouseenter', stopAutoSlide);
+    container.addEventListener('mouseleave', startAutoSlide);
+
+    // Start auto slide initially
+    startAutoSlide();
 });
